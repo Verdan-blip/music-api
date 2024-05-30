@@ -1,0 +1,39 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: music-api
+  datasource:
+    url: jdbc:postgresql://localhost:5432/muztache
+    username: postgres
+    password: 172332
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  jersey:
+    filter:
+      order: 10
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+
+token:
+  accessSecret: 12765295db4f1e7911ddb4f051191091a0432570270e1fca2076e718e61ddae0
+  refreshSecret: 586acb3c6bac489308c0938f762da702573a714dfdf3a729dcb40758b4c363ae
+  accessExpirationMs: 300000
+  refreshExpirationMs: 2592000000
+
+cloudinary:
+  cloud-name: dq3jdp5f0
+  api-key: 496388163559534
+  api-secret: 0Qj5v2o_lxuj3g71W_FxKdhO7ZE
